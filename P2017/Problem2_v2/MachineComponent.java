@@ -1,17 +1,16 @@
-package P2017.Problem2;
-
-import java.util.Observable;
+package P2017.Problem2_v2;
 
 public abstract class MachineComponent {
 
     protected long id;
 
-    public MachineComponent(long id)
-    {
+    public MachineComponent(long id) {
         this.id = id;
     }
 
     public long getId() {
         return this.id;
     }
+
+    public abstract void addThis(MachineComposite mc);
 }

@@ -1,4 +1,4 @@
-package P2017.Problem2;
+package P2017.Problem2_v2;
 
 import java.util.ArrayList;
 import java.util.Observable;
@@ -23,13 +23,20 @@ public class MachineComposite extends MachineComponent implements Observer {
         add(mc);
     }
 
-    private void add(MachineComponent mc) {
+    protected void add(MachineComponent mc) {
         // Adds the component to the list
         components.add(mc);
         // Adds the observer only if is of class MachineComposite
         if (mc instanceof MachineComposite) {
             ((MachineComposite) mc).addObserver(this);
         }
+    }
+
+    @Override
+    public void addThis(MachineComposite mc)
+    {
+        mc.add(this);
+        this.addObserver(mc);
     }
 
     @Override
