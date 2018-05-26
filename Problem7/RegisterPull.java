@@ -3,17 +3,17 @@ package Problem7;
 import java.util.Observable;
 import java.util.Observer;
 
-public class Register implements Observer {
+public class RegisterPull implements Observer {
 
     private Store store;
     private Sale currentSale;
 
-    public Register(Store store) {
+    public RegisterPull(Store store) {
         this.store = store;
     }
 
     public void createNewSale() {
-        currentSale = new SalePush();
+        currentSale = new SalePull();
 
         currentSale.addObserver(this);
     }
@@ -24,9 +24,10 @@ public class Register implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        String name = ((ProductDescription) arg).getDescription();
-        float unit_price = ((ProductDescription) arg).getPrice();
-        float total = currentSale.getTotal();
+        SalePull sale = (SalePull)o;
+        String name = sale.getSLI().getDesc().getDescription();
+        float unit_price = sale.getSLI().getDesc().getPrice();
+        float total = sale.getTotal();
 
         System.out.println("Added new product[" + name + "] with price [" + unit_price + "]");
         System.out.println("Current total: " + total);

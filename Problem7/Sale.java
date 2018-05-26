@@ -5,15 +5,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Observable;
 
-public class Sale extends Observable {
+public abstract class Sale extends Observable {
 
     protected List<SLI> lines = new ArrayList<>();
 
-    public void createSalesLineItem(
-            ProductDescription desc, int quantity) {
-        SLI sli = new SLI(desc, quantity);
-        lines.add(sli);
-    }
+    public abstract void createSalesLineItem(
+            ProductDescription desc, int quantity);
 
     public List<SLI> getLines() {
         return Collections.unmodifiableList(lines);
