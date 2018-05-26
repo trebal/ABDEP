@@ -1,14 +1,15 @@
 package Problem7;
 
-class ProductDescription {
+public class ProductDescription {
+
     private String description;
     private int price;
 
     public String getDescription() {
-        return this.description;
+        return description;
     }
 
     public int getPrice() {
-        return this.price;
+        return price;
     }
 }

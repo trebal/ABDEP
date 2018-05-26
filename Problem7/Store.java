@@ -1,10 +1,9 @@
 package Problem7;
 
-import java.util.Observer;
+public class Store {
 
-class Store {
-
-    void addSaleObserver(Observer o) {
+    public Store()
+    {
 
     }
 
