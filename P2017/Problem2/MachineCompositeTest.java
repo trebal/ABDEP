@@ -18,7 +18,7 @@ public class MachineCompositeTest {
         Machine machineComponent1 = new Machine(2);
         Machine machineComponent2 = new Machine(3);
 
-        testMachineComposite.addComponent(machineComponent1);
-        testMachineComposite.addComponent(machineComponent2);
+        /*testMachineComposite.addComponent(machineComponent1);
+        testMachineComposite.addComponent(machineComponent2);*/
     }
 }
