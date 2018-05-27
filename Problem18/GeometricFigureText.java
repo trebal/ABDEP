@@ -1,24 +1,23 @@
 package Problem18;
 
-public class Text extends Figure {
+public class GeometricFigureText extends GeometricFigure {
 
-    @Override
-    public void clickButton() {
+    GeometricFigureText(Text text) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public void drag() {
+    public void drop() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public void display() {
+    public void move() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public GeometricFigure makeGeometricFigure() {
-        return new GeometricFigureText(this);
+    public void scale() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

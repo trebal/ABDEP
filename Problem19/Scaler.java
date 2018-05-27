@@ -5,8 +5,7 @@ public class Scaler implements FigureVisitor {
     private final float scale;
 
     // Constructor
-    public Scaler(float scale)
-    {
+    public Scaler(float scale) {
         this.scale = scale;
     }
 

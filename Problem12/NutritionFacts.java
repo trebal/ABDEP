@@ -20,6 +20,15 @@ public class NutritionFacts {
         this.carbohydrate = carbohydrate;
     }
 
+    private NutritionFacts(Builder builder) {
+        this.servingSize = builder.servingSize;
+        this.servings = builder.servings;
+        this.calories = builder.calories;
+        this.fat = builder.fat;
+        this.sodium = builder.sodium;
+        this.carbohydrate = builder.carbohydrate;
+    }
+
     public static class Builder {
         private final int servingSize;
         private final int servings;
@@ -33,28 +42,28 @@ public class NutritionFacts {
             this.servings = servings;
         }
 
-        public Builder calories(int calories)
-        {
+        public Builder calories(int calories) {
             this.calories = calories;
             return this;
         }
 
-        public Builder fat(int fat)
-        {
+        public Builder fat(int fat) {
             this.fat = fat;
             return this;
         }
 
-        public Builder sodium(int sodium)
-        {
+        public Builder sodium(int sodium) {
             this.sodium = sodium;
             return this;
         }
 
-        public Builder carbohydrate(int carbohydrate)
-        {
+        public Builder carbohydrate(int carbohydrate) {
             this.carbohydrate = carbohydrate;
             return this;
+        }
+
+        public NutritionFacts build() {
+            return new NutritionFacts(this);
         }
     }
 }

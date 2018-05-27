@@ -1,27 +1,24 @@
 package Problem19;
 
-public class Circle extends Figure implements Scalable
-{
+public class Circle extends Figure implements FigureOperable {
+
     private float r;
 
     // Constructor
-    public Circle(float x, float y, float r)
-    {
+    public Circle(float x, float y, float r) {
         super(x, y);
         this.r = r;
     }
 
     // Copy constructor
-    public Circle(Circle other)
-    {
+    public Circle(Circle other) {
         super(other);
         this.r = other.r;
     }
 
-    // Copy function
+    // Copy method
     @Override
-    public Circle copy()
-    {
+    public Circle copy() {
         return new Circle(this);
     }
 
@@ -36,8 +33,7 @@ public class Circle extends Figure implements Scalable
     }
 
     @Override
-    public void accept(FigureVisitor figureVisitor)
-    {
+    public void accept(FigureVisitor figureVisitor) {
         figureVisitor.visit(this);
     }
 }

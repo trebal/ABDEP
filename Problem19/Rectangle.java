@@ -19,7 +19,7 @@ public class Rectangle extends Figure {
         this.height = other.height;
     }
 
-    // Copy function
+    // Copy method
     @Override
     public Rectangle copy() {
         return new Rectangle(this);
