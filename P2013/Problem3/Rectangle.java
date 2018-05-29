@@ -1,9 +1,5 @@
 package P2013.Problem3;
 
-import P2013.Problem2.Figure;
-
-import java.awt.*;
-
 public class Rectangle extends Figure {
 
     private final float width;

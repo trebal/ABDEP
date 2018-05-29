@@ -1,7 +1,5 @@
 package P2013.Problem3;
 
-import P2013.Problem2.Figure;
-
 public class Circle extends Figure {
 
     private final float r;

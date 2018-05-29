@@ -2,9 +2,6 @@ package P2013.Problem3;
 
 import java.awt.*;
 
-/**
- * Unfinished.
- */
 public abstract class Figure {
 
     private final float x;
@@ -102,7 +99,7 @@ public abstract class Figure {
                 if (dim_set || from_set || to_set || c_set) {
                     return null;
                 } else {
-                    //return new Circle(x, y, r);
+                    return new Circle(x, y, r);
                 }
             }
             // Return Rectangle if only dimensions has been set.
@@ -112,43 +109,23 @@ public abstract class Figure {
                 } else {
                     // ColorRectangle
                     if (c_set) {
-                        makeColorRectangle();
+                        return new ColorRectangle(x, y, w, h, c);
                     }
                     // Rectangle
                     else {
-                        makeRectangle();
+                        return new Rectangle(x, y, w, h);
                     }
                 }
             }
             // Return Line if only dimensions has been set.
-            else if(from_set && to_set)
-            {
-                if(c_set)
-                {
+            else if (from_set && to_set) {
+                if (c_set) {
                     return null;
-                }
-                else
-                {
-                    makeLine();
+                } else {
+                    return new Line(x, y, x2, y2);
                 }
             }
             return null;
-        }
-
-        private Circle makeCircle() {
-            return new Circle(x, y, r);
-        }
-
-        private Rectangle makeRectangle() {
-            return new Rectangle(x, y, w, h);
-        }
-
-        private ColorRectangle makeColorRectangle() {
-            return new ColorRectangle(x, y, w, h, c);
-        }
-
-        private Line makeLine() {
-            return new Line(x, y, x2, y2);
         }
     }
 }
