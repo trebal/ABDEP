@@ -1,4 +1,4 @@
-package Test;
+package BasicExamples.FactoryExample;
 
 public abstract class Vehicle {
 

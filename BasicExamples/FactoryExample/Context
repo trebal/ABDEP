@@ -1,0 +1,4 @@
+We have a travel company which loans vehicles. The suggested vehicle
+should be based on the passengers.
+
+In order to satisfy the requirements it must be used the Factory pattern.

@@ -1,0 +1,8 @@
+We have a watch shop. We also have different brands (Glorious Invictas
+and another lesser brand not worth to mention), which are classified
+by classes. Note that operations on the stock price modifies not
+only the price, but also specific attributes. So a generic method
+is not valid.
+
+In order to change the price of the stock we will use
+the Visitor pattern.
